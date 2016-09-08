@@ -1,9 +1,9 @@
-package com.journaldev.spring.smart.service;
+package com.hm.smartapp.service;
 
 import java.util.List;
 
-import com.journaldev.spring.model.Sortinfo;
-import com.journaldev.spring.model.Sortnumber;
+import com.hm.smartapp.model.Sortinfo;
+import com.hm.smartapp.model.Sortnumber;
 
 public interface SmartService {
 

@@ -1,4 +1,4 @@
-package com.journaldev.spring.randomnumber.service;
+package com.hm.smartapp.service.numbergenerator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.Random;
  * @author aravind
  *
  */
-public class RandomNumberServiceImpl implements DigitPickerService {
+public class RandomNumberServiceImpl implements NumberPickerService {
 	
 	private static final long RANDOM_SEED=98765432;
 	

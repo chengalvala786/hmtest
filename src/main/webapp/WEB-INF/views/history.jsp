@@ -44,6 +44,7 @@
 		<th width="80">Sort ID</th>
 		<th width="120">Sort Swaps</th>
 		<th width="120">Sort Dates</th>
+		<th width="120">Sort Duration(nano seconds)</th>
 		<th width="120">Sort number count</th>
 		<th width="60">Action</th>
 		
@@ -53,6 +54,7 @@
 			<td>${sortInfo.id}</td>
 			<td>${sortInfo.sortSwaps}</td>
 			<td>${sortInfo.sortDate}</td>
+			<td>${sortInfo.sortDuration}</td>
 			<td>${sortInfo.sizeOfNumbers}</td>
 			<td><a href="<c:url value='/view/numbers/${sortInfo.id}' />" >View Numbers</a></td>
 			

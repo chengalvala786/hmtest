@@ -1,4 +1,4 @@
-package com.journaldev.spring.smart.service;
+package com.hm.smartapp.service;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,18 +8,18 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.journaldev.spring.dao.SortDAO;
-import com.journaldev.spring.model.Sortinfo;
-import com.journaldev.spring.model.Sortnumber;
-import com.journaldev.spring.randomnumber.service.DigitPickerService;
-import com.journaldev.spring.sort.service.SortingService;
+import com.hm.smartapp.dao.SortDAO;
+import com.hm.smartapp.model.Sortinfo;
+import com.hm.smartapp.model.Sortnumber;
+import com.hm.smartapp.service.numbergenerator.NumberPickerService;
+import com.hm.smartapp.service.sorting.SortingService;
 
 @Qualifier(value="SmartService")
 @Service
 public class SmartServiceImpl implements SmartService {
 	
 	private SortDAO sortDAO;
-	private DigitPickerService digitPickerService;
+	private NumberPickerService digitPickerService;
 	private SortingService sortService;
 	
 	
@@ -29,7 +29,7 @@ public class SmartServiceImpl implements SmartService {
 	}
 
 
-	public void setDigitPickerService(DigitPickerService digitPickerService) {
+	public void setDigitPickerService(NumberPickerService digitPickerService) {
 		this.digitPickerService = digitPickerService;
 	}
 

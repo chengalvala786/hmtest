@@ -1,4 +1,4 @@
-package com.journaldev.spring;
+package com.hm.smartapp.controller;
 
 import java.util.List;
 
@@ -15,14 +15,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.journaldev.spring.model.Sortinfo;
-import com.journaldev.spring.model.Sortnumber;
-import com.journaldev.spring.smart.service.SmartService;
+import com.hm.smartapp.model.Sortinfo;
+import com.hm.smartapp.model.Sortnumber;
+import com.hm.smartapp.service.SmartService;
 
 @Controller
-public class NumberController {
+public class SmartAppController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(NumberController.class);
+	private static final Logger logger = LoggerFactory.getLogger(SmartAppController.class);
 	
 	private SmartService samrtService;
 	

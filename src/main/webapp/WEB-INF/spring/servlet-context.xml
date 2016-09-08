@@ -40,8 +40,8 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>com.journaldev.spring.model.Sortinfo</beans:value>
-				<beans:value>com.journaldev.spring.model.Sortnumber</beans:value>
+				<beans:value>com.hm.smartapp.model.Sortinfo</beans:value>
+				<beans:value>com.hm.smartapp.model.Sortnumber</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
@@ -53,28 +53,28 @@
 		</beans:property>
 	</beans:bean>
 	
-	<beans:bean id="sortDAO" class="com.journaldev.spring.dao.SortDAOImpl">
+	<beans:bean id="sortDAO" class="com.hm.smartapp.dao.SortDAOImpl">
 		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 
-	<beans:bean id="digitPickerService" class="com.journaldev.spring.randomnumber.service.RandomNumberServiceImpl">
+	<beans:bean id="digitPickerService" class="com.hm.smartapp.service.numbergenerator.RandomNumberServiceImpl">
 
 	</beans:bean>
 
 
-	<beans:bean id="sortService" class="com.journaldev.spring.sort.service.InsertionSortServiceImpl">
+	<beans:bean id="sortService" class="com.hm.smartapp.service.sorting.InsertionSortServiceImpl">
 
 	</beans:bean>
 
 	
 	
-	<beans:bean id="smartService" class="com.journaldev.spring.smart.service.SmartServiceImpl">
+	<beans:bean id="smartService" class="com.hm.smartapp.service.SmartServiceImpl">
 		<beans:property name="sortDAO"  ref="sortDAO"></beans:property>
 		<beans:property name="digitPickerService"  ref="digitPickerService"></beans:property>
 		<beans:property name="sortService"  ref="sortService"></beans:property>
 		
 	</beans:bean>
-	<context:component-scan base-package="com.journaldev.spring" />
+	<context:component-scan base-package="com.hm" />
 	
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 	

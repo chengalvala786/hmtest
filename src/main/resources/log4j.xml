@@ -35,7 +35,9 @@
 	<logger name="org.springframework.web">
 		<level value="info" />
 	</logger>
-
+	<logger name="com.hm">
+		<level value="debug" />
+	</logger>
 	<!-- Root Logger -->
 	<root>
 		<priority value="warn" />

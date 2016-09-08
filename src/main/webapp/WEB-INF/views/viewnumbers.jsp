@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title>Sorted Numbers Page</title>
-	
+	<link type="text/css" rel="stylesheet" href="<c:url value="/resources/static/css/main.css" />" />
 </head>
 <body>
 <h1>

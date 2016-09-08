@@ -1,4 +1,4 @@
-package com.journaldev.spring.model;
+package com.hm.smartapp.model;
 
 import java.io.Serializable;
 import javax.persistence.*;

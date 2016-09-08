@@ -1,4 +1,4 @@
-package com.journaldev.spring.model;
+package com.hm.smartapp.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -12,7 +12,11 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Entity
 @Table(name="sortnumbers")
-@NamedQuery(name="Sortnumber.findAll", query="SELECT s FROM Sortnumber s")
+@NamedQueries({
+	@NamedQuery(name="Sortnumber.findAll", query="SELECT s FROM Sortnumber s"),
+   @NamedQuery(name="Sortnumber.findBySortId", query="SELECT s FROM Sortnumber s WHERE s.sortinfo.id = :id")
+}) 
+
 public class Sortnumber implements Serializable {
 	private static final long serialVersionUID = 1L;
 

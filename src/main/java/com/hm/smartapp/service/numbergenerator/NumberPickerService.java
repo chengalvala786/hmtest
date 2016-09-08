@@ -1,7 +1,7 @@
-package com.journaldev.spring.randomnumber.service;
+package com.hm.smartapp.service.numbergenerator;
 
 import java.util.List;
 
-public interface DigitPickerService {
+public interface NumberPickerService {
 	public Integer[] generateRandomNumbers(int sizeOfNumbers);
 }

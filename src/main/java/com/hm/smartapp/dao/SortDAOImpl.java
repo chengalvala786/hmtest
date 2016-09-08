@@ -1,4 +1,4 @@
-package com.journaldev.spring.dao;
+package com.hm.smartapp.dao;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.journaldev.spring.model.Sortinfo;
-import com.journaldev.spring.model.Sortnumber;
-import com.journaldev.spring.randomnumber.service.DigitPickerService;
+import com.hm.smartapp.model.Sortinfo;
+import com.hm.smartapp.model.Sortnumber;
+import com.hm.smartapp.service.numbergenerator.NumberPickerService;
 
 
 @Repository
@@ -55,11 +55,13 @@ public class SortDAOImpl implements SortDAO {
 	@Override
 	public List<Sortnumber> listNumbers(int sortId) {
 		Session session = this.sessionFactory.getCurrentSession();
-		Sortinfo sortInfo = (Sortinfo )session.load(Sortinfo.class,sortId);
-		if (logger.isDebugEnabled() && sortInfo.getSortnumbers()!=null){
-			sortInfo.getSortnumbers().stream().forEach(System.out::println);
+		
+		List<Sortnumber> numberList = session.getNamedQuery("Sortnumber.findBySortId").setParameter("id",sortId).list();
+		
+		if (logger.isDebugEnabled()){
+			numberList.stream().forEach(System.out::println);
 		}
-		return sortInfo.getSortnumbers();
+		return numberList;
 	}
 	
 
